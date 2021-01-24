@@ -1,0 +1,11 @@
+.layui-nav .layui-icon,
+.layui-nav .iconfont {
+  margin: 0 10px;
+}
+iframe {
+  width: 100%;
+  height: 100%;
+}
+.layui-body {
+  overflow: hidden;
+}

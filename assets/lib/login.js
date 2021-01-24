@@ -23,7 +23,7 @@
     e.preventDefault();
     axios.post("/api/reguser", $(this).serialize()).then(res => {
       if (res.data.status !== 0) return layer.msg(res.data.message);
-      layer.msg("注册成功,请登录", { icon: 1, time: 1000 }, function () {
+      layer.msg("注册成功,请登录", { icon: 1, time: 2000 }, function () {
         $("#regi input").val("");
         $("#regi #loginA").click();
       });
@@ -35,7 +35,9 @@
     axios.post("/api/login", $(this).serialize()).then(res => {
       if (res.data.status !== 0) return layer.msg("用户名或密码错误");
       localStorage.setItem("token", res.data.token);
-      location.href = "/home/index.html";
+      layer.msg("登陆成功,即将跳转后台首页", { icon: 1, time: 2000 }, function () {
+        location.href = "/home/index.html";
+      });
     });
   });
 })();
