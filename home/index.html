@@ -8,8 +8,8 @@
       if (!localStorage.getItem("token")) location.href = "/home/login.html";
     </script>
     <link rel="stylesheet" href="/assets/lib/layui/css/layui.css" />
-    <link rel="stylesheet" href="/assets/lib/index.css" />
     <link rel="stylesheet" href="/assets/fonts/iconfont.css" />
+    <link rel="stylesheet" href="/assets/css/index.css" />
   </head>
   <body class="layui-layout-body">
     <div class="layui-layout layui-layout-admin">
@@ -21,14 +21,14 @@
         <ul class="layui-nav layui-layout-right">
           <li class="layui-nav-item">
             <a href="javascript:;">
-              <img src="http://t.cn/RCzsdCq" class="layui-nav-img" />
+              <img src="" class="layui-nav-img" />
               <span class="text_avatar"></span>
               个人中心
             </a>
             <dl class="layui-nav-child">
-              <dd><a href="">基本资料</a></dd>
-              <dd><a href="">更换头像</a></dd>
-              <dd><a href="">重置密码</a></dd>
+              <dd><a href="/user/user_info.html" target="box">基本资料</a></dd>
+              <dd><a href="/user/user_avatar.html" target="box">更换头像</a></dd>
+              <dd><a href="/user/user_pwd.html" target="box">重置密码</a></dd>
             </dl>
           </li>
           <li class="layui-nav-item">
@@ -38,8 +38,9 @@
       </div>
       <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
+          <!-- 用户信息展示 -->
           <div class="user_info">
-            <img src="http://t.cn/RCzsdCq" class="layui-nav-img" />
+            <img src="" class="layui-nav-img" />
             <span class="text_avatar"></span>
             <span class="user_name"></span>
           </div>
@@ -69,13 +70,19 @@
               <a href="javascript:;"><i class="iconfont icon-user"></i>个人中心</a>
               <dl class="layui-nav-child">
                 <dd>
-                  <a href="javascript:;"><i class="layui-icon layui-icon-app"></i>基本资料</a>
+                  <a href="/user/user_info.html" target="box"
+                    ><i class="layui-icon layui-icon-app"></i>基本资料</a
+                  >
                 </dd>
                 <dd>
-                  <a href="javascript:;"><i class="layui-icon layui-icon-app"></i>更换头像</a>
+                  <a href="/user/user_avatar.html" target="box"
+                    ><i class="layui-icon layui-icon-app"></i>更换头像</a
+                  >
                 </dd>
                 <dd>
-                  <a href="javascript:;"><i class="layui-icon layui-icon-app"></i>重置密码</a>
+                  <a href="/user/user_pwd.html" target="box"
+                    ><i class="layui-icon layui-icon-app"></i>重置密码</a
+                  >
                 </dd>
               </dl>
             </li>
@@ -85,7 +92,7 @@
 
       <div class="layui-body">
         <!-- 内容主体区域 -->
-        <iframe src="/home/dashboard.html" frameborder="0" name="box"></iframe>
+        <iframe src="/user/user_avatar.html" frameborder="0" name="box"></iframe>
       </div>
 
       <div class="layui-footer">
@@ -98,6 +105,6 @@
     <script src="/assets/lib/axios.min.js"></script>
     <script src="/assets/lib/ajaxBase.js"></script>
 
-    <script src="/assets/lib/index.js"></script>
+    <script src="/assets/js/index.js"></script>
   </body>
 </html>

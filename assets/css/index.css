@@ -16,6 +16,7 @@ iframe {
   height: 40px;
   line-height: 40px;
   border-radius: 50%;
+  font-size: 20px;
   background-color: #229689;
   text-align: center;
 }
@@ -30,4 +31,7 @@ iframe {
   text-align: center;
   padding-right: 20px;
   border-bottom: 1px solid #000;
+}
+.user_name {
+  font-size: 14px;
 }
