@@ -4,6 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>后台</title>
+    <script>
+      if (!localStorage.getItem("token")) location.href = "/home/login.html";
+    </script>
     <link rel="stylesheet" href="/assets/lib/layui/css/layui.css" />
     <link rel="stylesheet" href="/assets/lib/index.css" />
     <link rel="stylesheet" href="/assets/fonts/iconfont.css" />
@@ -19,6 +22,7 @@
           <li class="layui-nav-item">
             <a href="javascript:;">
               <img src="http://t.cn/RCzsdCq" class="layui-nav-img" />
+              <span class="text_avatar"></span>
               个人中心
             </a>
             <dl class="layui-nav-child">
@@ -28,12 +32,17 @@
             </dl>
           </li>
           <li class="layui-nav-item">
-            <a href=""><i class="iconfont icon-tuichu"></i>退出</a>
+            <a href="javascript:;" id="exit"><i class="iconfont icon-tuichu"></i>退出</a>
           </li>
         </ul>
       </div>
       <div class="layui-side layui-bg-black">
         <div class="layui-side-scroll">
+          <div class="user_info">
+            <img src="http://t.cn/RCzsdCq" class="layui-nav-img" />
+            <span class="text_avatar"></span>
+            <span class="user_name"></span>
+          </div>
           <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
           <ul class="layui-nav layui-nav-tree" lay-shrink="all" lay-filter="test">
             <li class="layui-nav-item layui-this">
@@ -84,6 +93,11 @@
         © layui.com - 底部固定区域
       </div>
     </div>
+    <script src="/assets/lib/jquery.js"></script>
     <script src="/assets/lib/layui/layui.all.js"></script>
+    <script src="/assets/lib/axios.min.js"></script>
+    <script src="/assets/lib/ajaxBase.js"></script>
+
+    <script src="/assets/lib/index.js"></script>
   </body>
 </html>

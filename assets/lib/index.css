@@ -9,3 +9,25 @@ iframe {
 .layui-body {
   overflow: hidden;
 }
+.text_avatar {
+  display: inline-block;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: #229689;
+  text-align: center;
+}
+.layui-nav-img {
+  display: none;
+  width: 40px;
+  height: 40px;
+}
+.user_info {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  padding-right: 20px;
+  border-bottom: 1px solid #000;
+}
