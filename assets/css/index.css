@@ -35,3 +35,6 @@ iframe {
 .user_name {
   font-size: 14px;
 }
+.layui-footer {
+  text-align: center;
+}

@@ -1,6 +1,5 @@
 function getUserInfo() {
   axios.get("/my/userinfo").then(res => {
-    console.log(res.data.data);
     setAvatarAndName(res.data.data);
   });
 }

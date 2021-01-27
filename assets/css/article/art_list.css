@@ -1,0 +1,10 @@
+body {
+  padding: 15px;
+  background-color: #f2f3f5;
+}
+.list_form .layui-inline {
+  margin-right: 10px;
+}
+.layui-card-body > div {
+  margin-bottom: 20px;
+}
